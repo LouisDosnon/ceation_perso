@@ -1,0 +1,182 @@
+[
+  {
+    "name": "assasins",
+    "caracteristique": {
+      "adr_min": 13,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "bourgeois",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 11,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 10,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "guerrier",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 12,
+      "cou_max": 20,
+      "fo_min": 12,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "ingenieur",
+    "caracteristique": {
+      "adr_min": 11,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "mage",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 12,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "marchand",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 11,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 12,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "menestrel",
+    "caracteristique": {
+      "adr_min": 11,
+      "adr_max": 20,
+      "cha_min": 12,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "paladin",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 11,
+      "cha_max": 20,
+      "cou_min": 12,
+      "cou_max": 20,
+      "fo_min": 9,
+      "fo_max": 20,
+      "int_min": 10,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "pirate",
+    "caracteristique": {
+      "adr_min": 11,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 11,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "pretre",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 12,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "ranger",
+    "caracteristique": {
+      "adr_min": 10,
+      "adr_max": 20,
+      "cha_min": 10,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  },
+  {
+    "name": "voleur",
+    "caracteristique": {
+      "adr_min": 12,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    }
+  }
+]

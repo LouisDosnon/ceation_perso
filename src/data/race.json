@@ -1,0 +1,276 @@
+[
+  {
+    "name": "humain",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    },
+    "classe_incompatible": []
+  },
+  {
+    "name": "barbare",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 12,
+      "cou_max": 20,
+      "fo_min": 13,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    },
+    "classe_incompatible": [
+      "assasins",
+      "bourgeois",
+      "ingenieur",
+      "mage",
+      "marchand",
+      "menestrel",
+      "paladin",
+      "pirate",
+      "pretre",
+      "voleur"
+    ]
+  },
+  {
+    "name": "nain",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 11,
+      "cou_max": 20,
+      "fo_min": 12,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    },
+    "classe_incompatible": [
+      "mage",
+      "menestrel",
+      "paladin",
+      "pretre"
+    ]
+  },
+  {
+    "name": "semi-homme",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 12,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 10,
+      "int_min": 10,
+      "int_max": 20
+    },
+    "classe_incompatible": [
+      "guerrier"
+    ]
+  },
+  {
+    "name": "demi-elfe",
+    "caracteristique": {
+      "adr_min": 11,
+      "adr_max": 20,
+      "cha_min": 10,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    },
+    "classe_incompatible": []
+  },
+  {
+    "name": "haut-elfe",
+    "caracteristique": {
+      "adr_min": 12,
+      "adr_max": 20,
+      "cha_min": 12,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 12,
+      "int_min": 11,
+      "int_max": 20
+    },
+    "classe_incompatible": []
+  },
+  {
+    "name": "elfe sylvain",
+    "caracteristique": {
+      "adr_min": 10,
+      "adr_max": 20,
+      "cha_min": 12,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 11,
+      "int_min": 0,
+      "int_max": 20
+    },
+    "classe_incompatible": [
+      "assasins",
+      "guerrier",
+      "pirate",
+      "voleur"
+    ]
+  },
+  {
+    "name": "elfe-noir",
+    "caracteristique": {
+      "adr_min": 13,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 12,
+      "int_min": 12,
+      "int_max": 20
+    },
+    "classe_incompatible": []
+  },
+  {
+    "name": "demi-orque",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 11,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 12,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 10
+    },
+    "classe_incompatible": [
+      "assasins",
+      "bourgeois",
+      "mage",
+      "marchand",
+      "paladin",
+      "pretre",
+      "voleur"
+    ]
+  },
+  {
+    "name": "orque",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 10,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 12,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 8
+    },
+    "classe_incompatible": [
+      "bourgeois",
+      "mage",
+      "marchand",
+      "menstrel",
+      "paladin",
+      "pretre",
+      "ranger"
+    ]
+  },
+  {
+    "name": "gobelin",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 0,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 20
+    },
+    "classe_incompatible": [
+      "bourgeois",
+      "guerrier",
+      "mage",
+      "marchand",
+      "menestrel",
+      "paladin",
+      "pirate",
+      "pretre",
+      "ranger"
+    ]
+  },
+  {
+    "name": "ogre",
+    "caracteristique": {
+      "adr_min": 0,
+      "adr_max": 13,
+      "cha_min": 0,
+      "cha_max": 10,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 13,
+      "fo_max": 20,
+      "int_min": 0,
+      "int_max": 9
+    },
+    "classe_incompatible": [
+      "assasins",
+      "bourgeois",
+      "assasins",
+      "ingenieur",
+      "mage",
+      "marchand",
+      "menestrel",
+      "paladin",
+      "pretre",
+      "ranger",
+      "voleur"
+    ]
+  },
+  {
+    "name": "gnome",
+    "caracteristique": {
+      "adr_min": 13,
+      "adr_max": 20,
+      "cha_min": 0,
+      "cha_max": 20,
+      "cou_min": 0,
+      "cou_max": 20,
+      "fo_min": 8,
+      "fo_max": 20,
+      "int_min": 10,
+      "int_max": 20
+    },
+    "classe_incompatible": [
+      "guerrier",
+      "mage",
+      "paladin",
+      "pretre"
+    ]
+  }
+]
