@@ -66,3 +66,5 @@ class SelectionRaceToClasse extends React.Component {
         });
     }
 }
+
+export default SelectionRaceToClasse;

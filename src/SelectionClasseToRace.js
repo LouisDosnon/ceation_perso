@@ -1,6 +1,6 @@
 import React from "@types/react";
-import Classes from "./data/classe.json";
 import Races from "./data/race.json";
+import Classes from "./data/classe.json";
 
 class SelectionClasseToRace extends React.Component {
     constructor(props) {
@@ -68,3 +68,5 @@ class SelectionClasseToRace extends React.Component {
         });
     }
 }
+
+export default SelectionClasseToRace;

@@ -1,6 +1,6 @@
 import React from 'react';
 import SelectionRaceToClasse from './SelectionRaceToClasse';
-import SelectionClasseToRace from './SelectionClasseToRacee';
+import SelectionClasseToRace from './SelectionClasseToRace';
 
 
 
