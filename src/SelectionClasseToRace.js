@@ -20,7 +20,7 @@ class SelectionClasseToRace extends React.Component {
                 </select>
                 <p id="classe">classe : {Classes[this.state.classe].name}</p>
                 <p id="race">race :</p>
-                <ul>
+                <div className="container">
                     {Races.map(race => {
                         let compatible = {
                             "race": race.name,
@@ -29,7 +29,7 @@ class SelectionClasseToRace extends React.Component {
                         if (JSON.stringify(Compatibilite).includes(JSON.stringify(compatible))) {
                             let carac = Classes[this.state.classe].caracteristique
                             return (
-                                <li>{race.name} :
+                                <div className="box">{race.name} :
                                     <ul>
                                         <li>adresse : {this.max(carac.adr_min, race.caracteristique.adr_min)} -> {this.min(carac.adr_max, race.caracteristique.adr_max)}</li>
                                         <li>charisme : {this.max(carac.cha_min, race.caracteristique.cha_min)} -> {this.min(carac.cha_max, race.caracteristique.cha_max)}</li>
@@ -37,11 +37,11 @@ class SelectionClasseToRace extends React.Component {
                                         <li>force : {this.max(carac.fo_min, race.caracteristique.fo_min)} -> {this.min(carac.fo_max, race.caracteristique.fo_max)}</li>
                                         <li>intelligence : {this.max(carac.int_min, race.caracteristique.int_min)} -> {this.min(carac.int_max, race.caracteristique.int_max)}</li>
                                     </ul>
-                                </li>
+                                </div>
                             );
                         }
                     })}
-                </ul>
+                </div>
             </div>
         );
     }
