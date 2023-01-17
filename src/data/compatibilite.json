@@ -1,0 +1,406 @@
+[
+  {
+    "race": "humain",
+    "classe": "assasins"
+  },
+  {
+    "race": "humain",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "humain",
+    "classe": "guerrier"
+  },
+  {
+    "race": "humain",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "humain",
+    "classe": "mage"
+  },
+  {
+    "race": "humain",
+    "classe": "marchand"
+  },
+  {
+    "race": "humain",
+    "classe": "menestrel"
+  },
+  {
+    "race": "humain",
+    "classe": "paladin"
+  },
+  {
+    "race": "humain",
+    "classe": "pirate"
+  },
+  {
+    "race": "humain",
+    "classe": "pretre"
+  },
+  {
+    "race": "humain",
+    "classe": "ranger"
+  },
+  {
+    "race": "humain",
+    "classe": "voleur"
+  },
+  {
+    "race": "barbare",
+    "classe": "guerrier"
+  },
+  {
+    "race": "barbare",
+    "classe": "ranger"
+  },
+  {
+    "race": "nain",
+    "classe": "assasins"
+  },
+  {
+    "race": "nain",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "nain",
+    "classe": "guerrier"
+  },
+  {
+    "race": "nain",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "nain",
+    "classe": "marchand"
+  },
+  {
+    "race": "nain",
+    "classe": "pirate"
+  },
+  {
+    "race": "nain",
+    "classe": "ranger"
+  },
+  {
+    "race": "nain",
+    "classe": "voleur"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "assasins"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "mage"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "marchand"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "menestrel"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "paladin"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "pirate"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "pretre"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "ranger"
+  },
+  {
+    "race": "semi-homme",
+    "classe": "voleur"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "assasins"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "guerrier"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "mage"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "marchand"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "menestrel"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "paladin"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "pirate"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "pretre"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "ranger"
+  },
+  {
+    "race": "demi-elfe",
+    "classe": "voleur"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "assasins"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "guerrier"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "mage"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "marchand"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "menestrel"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "paladin"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "pirate"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "pretre"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "ranger"
+  },
+  {
+    "race": "haut-elfe",
+    "classe": "voleur"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "mage"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "marchand"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "menestrel"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "paladin"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "pretre"
+  },
+  {
+    "race": "elfe sylvain",
+    "classe": "ranger"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "assasins"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "guerrier"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "mage"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "marchand"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "menestrel"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "paladin"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "pirate"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "pretre"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "ranger"
+  },
+  {
+    "race": "elfe-noir",
+    "classe": "voleur"
+  },
+  {
+    "race": "demi-orque",
+    "classe": "guerrier"
+  },
+  {
+    "race": "demi-orque",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "demi-orque",
+    "classe": "menestrel"
+  },
+  {
+    "race": "demi-orque",
+    "classe": "pirate"
+  },
+  {
+    "race": "demi-orque",
+    "classe": "ranger"
+  },
+  {
+    "race": "orque",
+    "classe": "assasins"
+  },
+  {
+    "race": "orque",
+    "classe": "guerrier"
+  },
+  {
+    "race": "orque",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "orque",
+    "classe": "menestrel"
+  },
+  {
+    "race": "orque",
+    "classe": "pirate"
+  },
+  {
+    "race": "orque",
+    "classe": "voleur"
+  },
+  {
+    "race": "gobelin",
+    "classe": "assasins"
+  },
+  {
+    "race": "gobelin",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "gobelin",
+    "classe": "voleur"
+  },
+  {
+    "race": "ogre",
+    "classe": "guerrier"
+  },
+  {
+    "race": "ogre",
+    "classe": "pirate"
+  },
+  {
+    "race": "gnome",
+    "classe": "assasins"
+  },
+  {
+    "race": "gnome",
+    "classe": "bourgeois"
+  },
+  {
+    "race": "gnome",
+    "classe": "ingenieur"
+  },
+  {
+    "race": "gnome",
+    "classe": "marchand"
+  },
+  {
+    "race": "gnome",
+    "classe": "menestrel"
+  },
+  {
+    "race": "gnome",
+    "classe": "pirate"
+  },
+  {
+    "race": "gnome",
+    "classe": "ranger"
+  },
+  {
+    "race": "gnome",
+    "classe": "voleur"
+  }
+]
