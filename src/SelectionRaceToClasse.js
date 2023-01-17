@@ -1,6 +1,7 @@
-import React from "@types/react";
+import React from "react";
 import Races from "./data/race.json";
 import Classes from "./data/classe.json";
+import Compatibilite from "./data/compatibilite.json";
 
 class SelectionRaceToClasse extends React.Component {
     constructor(props) {
@@ -21,8 +22,11 @@ class SelectionRaceToClasse extends React.Component {
                 <p id="classe">classe :</p>
                 <ul>
                     {Classes.map(classe => {
-                        let classe_incompatible = Races[this.state.race].classe_incompatible;
-                        if (!classe_incompatible.includes(classe.name)) {
+                        let compatible = {
+                            "race": Races[this.state.race].name,
+                            "classe": classe.name
+                        };
+                        if (JSON.stringify(Compatibilite).includes(JSON.stringify(compatible))) {
                             let carac = Races[this.state.race].caracteristique
                             return (
                                 <li>{classe.name} :
@@ -67,4 +71,4 @@ class SelectionRaceToClasse extends React.Component {
     }
 }
 
-export default SelectionRaceToClasse;
+export { SelectionRaceToClasse };

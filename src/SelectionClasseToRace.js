@@ -1,11 +1,12 @@
-import React from "@types/react";
+import React from "react";
 import Races from "./data/race.json";
 import Classes from "./data/classe.json";
+import Compatibilite from "./data/compatibilite.json";
 
 class SelectionClasseToRace extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { classe : "0", min_classe : Classes[0].min, max : Classes[0].max};
+        this.state = { classe : "0"};
         this.handleChangeClasse = this.handleChangeClasse.bind(this);
     }
 
@@ -18,11 +19,14 @@ class SelectionClasseToRace extends React.Component {
                     ))}
                 </select>
                 <p id="classe">classe : {Classes[this.state.classe].name}</p>
-                <p id="race">racee :</p>
+                <p id="race">race :</p>
                 <ul>
                     {Races.map(race => {
-                        let classe_incompatible = Classes[this.state.classe].race_incompatible;
-                        if (!classe_incompatible.includes(race.name)) {
+                        let compatible = {
+                            "race": race.name,
+                            "classe": Classes[this.state.classe].name
+                        };
+                        if (JSON.stringify(Compatibilite).includes(JSON.stringify(compatible))) {
                             let carac = Classes[this.state.classe].caracteristique
                             return (
                                 <li>{race.name} :
@@ -60,13 +64,11 @@ class SelectionClasseToRace extends React.Component {
 
     handleChangeClasse(e) {
         this.setState({
-            race : e.target.value,
-            min :  Classes[e.target.value].min,
-            max :  Classes[e.target.value].max
+            classe : e.target.value
         }, () => {
             console.log(this.state);
         });
     }
 }
 
-export default SelectionClasseToRace;
+export { SelectionClasseToRace };
