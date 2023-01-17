@@ -12,13 +12,7 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "elfe sylvain",
-      "demi-orque",
-      "ogre"
-    ]
+    }
   },
   {
     "name": "bourgeois",
@@ -33,14 +27,7 @@
       "fo_max": 20,
       "int_min": 10,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "demi-orque",
-      "orque",
-      "gobelin",
-      "ogre"
-    ]
+    }
   },
   {
     "name": "guerrier",
@@ -55,13 +42,7 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "semi-homme",
-      "elfe sylvain",
-      "gobelin",
-      "gnome"
-    ]
+    }
   },
   {
     "name": "ingenieur",
@@ -76,11 +57,7 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "ogre"
-    ]
+    }
   },
   {
     "name": "mage",
@@ -95,16 +72,7 @@
       "fo_max": 20,
       "int_min": 12,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "nain",
-      "demi-orque",
-      "orque",
-      "gobelin",
-      "ogre",
-      "gnome"
-    ]
+    }
   },
   {
     "name": "marchand",
@@ -119,14 +87,7 @@
       "fo_max": 20,
       "int_min": 12,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "demi-orque",
-      "orque",
-      "gobelin",
-      "ogre"
-    ]
+    }
   },
   {
     "name": "menestrel",
@@ -141,14 +102,7 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "nain",
-      "orque",
-      "gobelin",
-      "ogre"
-    ]
+    }
   },
   {
     "name": "paladin",
@@ -163,16 +117,7 @@
       "fo_max": 20,
       "int_min": 10,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "nain",
-      "demi-orque",
-      "orque",
-      "gobelin",
-      "ogre",
-      "gnome"
-    ]
+    }
   },
   {
     "name": "pirate",
@@ -187,12 +132,7 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "elfe sylvain",
-      "orque"
-    ]
+    }
   },
   {
     "name": "pretre",
@@ -207,16 +147,7 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "nain",
-      "demi-orque",
-      "orque",
-      "gobelin",
-      "ogre",
-      "gnome"
-    ]
+    }
   },
   {
     "name": "ranger",
@@ -231,12 +162,7 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "orque",
-      "gobelin",
-      "ogre"
-    ]
+    }
   },
   {
     "name": "voleur",
@@ -251,12 +177,6 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    },
-    "race_incompatible": [
-      "barbare",
-      "elfe silvain",
-      "demi-orque",
-      "ogre"
-    ]
+    }
   }
 ]
