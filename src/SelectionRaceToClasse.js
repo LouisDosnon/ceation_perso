@@ -2,6 +2,7 @@ import React from "react";
 import Races from "./data/race.json";
 import Classes from "./data/classe.json";
 import Compatibilite from "./data/compatibilite.json";
+import { Description } from "./Description";
 
 class SelectionRaceToClasse extends React.Component {
     constructor(props) {
@@ -13,6 +14,7 @@ class SelectionRaceToClasse extends React.Component {
     render() {
         return (
             <div>
+                <h2>Race => Classe:</h2>
                 <select name="race" id="select_race" onChange={this.handleChangeRace}>
                     {Races.map(race => (
                         <option value={Races.indexOf(race)}>{race.name}</option>
@@ -29,15 +31,7 @@ class SelectionRaceToClasse extends React.Component {
                         if (JSON.stringify(Compatibilite).includes(JSON.stringify(compatible))) {
                             let carac = Races[this.state.race].caracteristique
                             return (
-                                <div className="box">{classe.name} :
-                                    <ul>
-                                        <li>adresse : {this.max(carac.adr_min, classe.caracteristique.adr_min)} -> {this.min(carac.adr_max, classe.caracteristique.adr_max)}</li>
-                                        <li>charisme : {this.max(carac.cha_min, classe.caracteristique.cha_min)} -> {this.min(carac.cha_max, classe.caracteristique.cha_max)}</li>
-                                        <li>courage : {this.max(carac.cou_min, classe.caracteristique.cou_min)} -> {this.min(carac.cou_max, classe.caracteristique.cou_max)}</li>
-                                        <li>force : {this.max(carac.fo_min, classe.caracteristique.fo_min)} -> {this.min(carac.fo_max, classe.caracteristique.fo_max)}</li>
-                                        <li>intelligence : {this.max(carac.int_min, classe.caracteristique.int_min)} -> {this.min(carac.int_max, classe.caracteristique.int_max)}</li>
-                                    </ul>
-                                </div>
+                                <Description classe={classe} race={Races[this.state.race]} />
                             );
                         }
                     })}
