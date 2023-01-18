@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/creation_perso.github.io/static/css/main.e6c13ad2.css",
-    "main.js": "/creation_perso.github.io/static/js/main.821f6e79.js",
+    "main.css": "/creation_perso.github.io/static/css/main.51573bb2.css",
+    "main.js": "/creation_perso.github.io/static/js/main.5af0d00b.js",
     "static/js/787.96959c81.chunk.js": "/creation_perso.github.io/static/js/787.96959c81.chunk.js",
+    "static/media/img1.png": "/creation_perso.github.io/static/media/img1.dbfb976912129f539a0b.png",
     "index.html": "/creation_perso.github.io/index.html",
-    "main.e6c13ad2.css.map": "/creation_perso.github.io/static/css/main.e6c13ad2.css.map",
-    "main.821f6e79.js.map": "/creation_perso.github.io/static/js/main.821f6e79.js.map",
+    "main.51573bb2.css.map": "/creation_perso.github.io/static/css/main.51573bb2.css.map",
+    "main.5af0d00b.js.map": "/creation_perso.github.io/static/js/main.5af0d00b.js.map",
     "787.96959c81.chunk.js.map": "/creation_perso.github.io/static/js/787.96959c81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.821f6e79.js"
+    "static/css/main.51573bb2.css",
+    "static/js/main.5af0d00b.js"
   ]
 }
