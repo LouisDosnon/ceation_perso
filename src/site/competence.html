@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <ul class="navBar">
+        <li><a href="" id="home">home</a></li>
+        <li><a href="" id="carac">caracteristique</a></li>
+        <li><a href="" id="comp" class="active">competence</a></li>
+        <li><a href="" id="monaie">monaie</a></li>
+        <li><a href="" id="inv">inventaire</a></li>
+        <li><a href="" id="equip">equipement</a></li>
+        <li><a href="" id="coupS">coup speciaux</a></li>
+        <li><a href="" id="modif">modificateur</a></li>
+        <li><a href="" id="drive">drive</a></li>
+    </ul>
+    <h1>Competences</h1>
+    <div class="carac grey">
+        <button onclick="addComp()">add</button>
+        <table>
+            <thead>
+            <th class = "td_span"></th>
+            <th class = "td_button"></th>
+            <th class = "td_button"></th>
+            </thead>
+            <tbody id="list_comp">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // Récupère la chaîne de requête de l'URL actuelle
+        const searchParams = new URLSearchParams(window.location.search);
+
+        // Récupère la valeur du paramètre "paramName"
+        const getParam = searchParams.get("perso");
+
+        let comp;
+
+        function generateComp(){
+            $.ajax({
+                method : "get",
+                url : `get/${getParam}`,
+                dataType: "json",
+                success : function(data) {
+                    let comp = data.perso.competence
+                    comp.listObj.forEach(element => {
+                        let tr = document.createElement("tr");
+                        let td1 = document.createElement("td");
+                        let td2 = document.createElement("td");
+                        let td3 = document.createElement("td");
+                        let span = document.createElement("span");
+                        let buttonModif = document.createElement("button");
+                        let buttonSuppr = document.createElement("button");
+                        let temp = comp["listObj"].indexOf(element);
+                        span.textContent = element.nom + " = " + element.desc;
+                        buttonModif.addEventListener("click", () => {
+                            modifComp(temp);
+                        });
+                        buttonModif.textContent = "modif";
+                        buttonSuppr.addEventListener("click", () => {
+                            supprComp(temp);
+                        });
+                        buttonSuppr.textContent = "suppr";
+                        td1.appendChild(span);
+                        td2.appendChild(buttonModif);
+                        td3.appendChild(buttonSuppr);
+                        tr.appendChild(td1);
+                        tr.appendChild(td2);
+                        tr.appendChild(td3);
+                        document.getElementById("list_comp").appendChild(tr);
+                    });
+                }
+            })
+        }
+
+        function modifComp(i) {
+            comp["listObj"][i]["nom"] = prompt("please enter new name", comp["listObj"][i]["nom"]);
+            comp["listObj"][i]["desc"] = prompt("please enter new description", comp["listObj"][i]["desc"])
+            const liComp = document.getElementById("list_comp");
+            while(liComp.hasChildNodes()){
+                liComp.removeChild(liComp.firstChild);
+            }
+            perso["competence"] = comp;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateComp();
+        }
+
+        function addComp() {
+            let nom = prompt("please enter new name");
+            let desc = prompt("please enter new description");
+            comp["listObj"].push({"nom": nom, "desc": desc});
+            const liComp = document.getElementById("list_comp");
+            while(liComp.hasChildNodes()){
+                liComp.removeChild(liComp.firstChild);
+            }
+            perso["competence"] = comp;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateComp();
+        }
+
+        function supprComp(i) {
+            comp["listObj"][i]["nom"] = prompt("please enter new name", comp["listObj"][i]["nom"]);
+            delete comp["listObj"][i];
+            const liComp = document.getElementById("list_comp");
+            while(liComp.hasChildNodes()){
+                liComp.removeChild(liComp.firstChild);
+            }
+            perso["compentaire"] = comp;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateComp();
+        }
+
+        let carac = document.getElementById("carac");
+        let home = document.getElementById("home");
+        let monaie = document.getElementById("monaie");
+        let inv = document.getElementById("inv");
+        let equip = document.getElementById("equip");
+        let coupS = document.getElementById("coupS");
+        let modif = document.getElementById("modif");
+
+        carac.href = "caracteristique.html?perso="+getParam;
+        home.href = "perso.html?perso="+getParam;
+        monaie.href = "monaie.html?perso="+getParam;
+        inv.href = "inventaire.html?perso="+getParam;
+        equip.href = "equipement.html?perso="+getParam;
+        coupS.href = "coup_speciaux.html?perso="+getParam;
+        modif.href = "modificateur.html?perso="+getParam;
+
+        generateComp()
+    </script>
+</body>
+</html>

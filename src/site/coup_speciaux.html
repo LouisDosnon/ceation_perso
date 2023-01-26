@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        const id = $_GET('id');
+    </script>
+</head>
+<body>
+    <ul class="navBar">
+        <li><a href="" id="home">home</a></li>
+        <li><a href="" id="carac">caracteristique</a></li>
+        <li><a href="" id="comp">competence</a></li>
+        <li><a href="" id="monaie">monaie</a></li>
+        <li><a href="" id="inv">inventaire</a></li>
+        <li><a href="" id="equip">equipement</a></li>
+        <li><a href="" id="coupS" class="active">coup speciaux</a></li>
+        <li><a href="" id="modif">modificateur</a></li>
+        <li><a href="" id="drive">drive</a></li>
+    </ul>
+    <h1>Coup Speciaux</h1>
+    <div class="carac grey">
+        <button onclick="addCoupS()">add</button>
+        <table>
+            <thead>
+            <th class = "td_span"></th>
+            <th class = "td_button"></th>
+            <th class = "td_button"></th>
+            </thead>
+            <tbody id="list_coupS">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let coupS;
+
+        function generateCoupS(){
+            coupS["listCoup"].forEach(element => {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+                let span = document.createElement("span");
+                let buttonModif = document.createElement("button");
+                let buttonSuppr = document.createElement("button");
+                let temp = coupS["listCoup"].indexOf(element);
+                span.textContent = element["nom"] + " = " + element["desc"];
+                buttonModif.addEventListener("click", () => {
+                    modifCoupS(temp);
+                });
+                buttonModif.textContent = "modif";
+                buttonSuppr.addEventListener("click", () => {
+                    supprCoupS(temp);
+                });
+                buttonSuppr.textContent = "suppr";
+                td1.appendChild(span);
+                td2.appendChild(buttonModif);
+                td3.appendChild(buttonSuppr);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                document.getElementById("list_coupS").appendChild(tr);
+            });
+        }
+
+        function modifCoupS(i) {
+            coupS["listCoup"][i]["nom"] = prompt("please enter new name", coupS["listCoup"][i]["nom"]);
+            coupS["listCoup"][i]["desc"] = prompt("please enter new description", coupS["listCoup"][i]["desc"])
+            const liComp = document.getElementById("list_coupS");
+            while(liComp.hasChildNodes()){
+                liComp.removeChild(liComp.firstChild);
+            }
+            perso["coupSpeciaux"] = coupS;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateCoupS();
+        }
+
+        function addCoupS() {
+            let nom = prompt("please enter new name");
+            let desc = prompt("please enter new description");
+            coupS["listCoup"].push({"nom": nom, "desc": desc});
+            const liComp = document.getElementById("list_coupS");
+            while(liComp.hasChildNodes()){
+                liComp.removeChild(liComp.firstChild);
+            }
+            perso["coupSpeciaux"] = coupS;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateCoupS();
+        }
+
+        function supprCoupS(i) {
+            coupS["listCoup"][i]["nom"] = prompt("please enter new name", coupS["listCoup"][i]["nom"]);
+            delete coupS["listCoup"][i];
+            const liComp = document.getElementById("list_coupS");
+            while(liComp.hasChildNodes()){
+                liComp.removeChild(liComp.firstChild);
+            }
+            perso["coupSpeciaux"] = coupS;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateCoupS();
+        }
+
+        perso = JSON.parse(window.sessionStorage.getItem(id));
+        if(perso["coupSpeciaux"] !== undefined) {
+            coupS = perso["coupSpeciaux"];
+        } else {
+            coupS = {"listCoup" : []};
+        }
+        generateCoupS();
+
+        let carac = document.getElementById("carac");
+        let comp = document.getElementById("comp");
+        let monaie = document.getElementById("monaie");
+        let inv = document.getElementById("inv");
+        let equip = document.getElementById("equip");
+        let home = document.getElementById("home");
+        let modif = document.getElementById("modif");
+
+        carac.href = "caracteristique.html?id="+id;
+        comp.href = "competence.html?id="+id;
+        monaie.href = "monaie.html?id="+id;
+        inv.href = "inventaire.html?id="+id;
+        equip.href = "equipement.html?id="+id;
+        home.href = "perso.html?id="+id;
+        modif.href = "modificateur.html?id="+id;
+    </script>
+</body>
+</html>

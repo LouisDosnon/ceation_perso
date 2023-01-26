@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        const id = $_GET('id');
+    </script>
+</head>
+<body>
+    <ul class="navBar">
+        <li><a href="" id="home">home</a></li>
+        <li><a href="" id="carac">caracteristique</a></li>
+        <li><a href="" id="comp">competence</a></li>
+        <li><a href="" id="monaie">monaie</a></li>
+        <li><a href="" id="inv">inventaire</a></li>
+        <li><a href="" id="equip">equipement</a></li>
+        <li><a href="" id="coupS">coup speciaux</a></li>
+        <li><a href="" id="modif" class="active">modificateur</a></li>
+        <li><a href="" id="drive">drive</a></li>
+    </ul>
+    <h1>Modificateurs</h1>
+    <div class="carac grey">
+        <button onclick="addModif()">add</button>
+        <table>
+            <thead>
+            <th class = "td_span"></th>
+            <th class = "td_button"></th>
+            <th class = "td_button"></th>
+            </thead>
+            <tbody id="list_modif">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let modif;
+
+        function generateModif(){
+            modif["listModif"].forEach(element => {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+                let span = document.createElement("span");
+                let buttonModif = document.createElement("button");
+                let buttonSuppr = document.createElement("button");
+                let temp = modif["listModif"].indexOf(element);
+                span.textContent = element["attribut"] + " = " + element["desc"] + "(" + element["difference"] + ")";
+                buttonModif.addEventListener("click", () => {
+                    modifModif(temp);
+                });
+                buttonModif.textContent = "modif";
+                buttonSuppr.addEventListener("click", () => {
+                    supprModif(temp);
+                });
+                buttonSuppr.textContent = "suppr";
+                td1.appendChild(span);
+                td2.appendChild(buttonModif);
+                td3.appendChild(buttonSuppr);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                document.getElementById("list_modif").appendChild(tr);
+            });
+        }
+
+        function addModif() {
+            let attribut = prompt("please enter new attribut");
+            let desc = prompt("please enter new description");
+            let diff = prompt("please enter new difference");
+            modif["listModif"].push({"attribut": attribut, "desc": desc, "difference": diff});
+            const liInv = document.getElementById("list_modif");
+            while(liInv.hasChildNodes()){
+                liInv.removeChild(liInv.firstChild);
+            }
+            perso["modificateurs"] = modif;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateModif();
+        }
+
+        function modifModif(i) {
+            modif["listModif"][i]["attribut"] = prompt("please enter new attribut", modif["listModif"][i]["attribut"]);
+            modif["listModif"][i]["desc"] = prompt("please enter new description", modif["listModif"][i]["desc"]);
+            modif["listModif"][i]["difference"] = prompt("please enter new difference", modif["listModif"][i]["difference"]);
+            const liInv = document.getElementById("list_modif");
+            while(liInv.hasChildNodes()){
+                liInv.removeChild(liInv.firstChild);
+            }
+            perso["modificateurs"] = modif;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateModif();
+        }
+
+        function supprModif(i) {
+            modif["listModif"][i]["attribut"] = prompt("please enter new name", modif["listModif"][i]["attribut"]);
+            delete modif["listModif"][i];
+            const liInv = document.getElementById("list_modif");
+            while(liInv.hasChildNodes()){
+                liInv.removeChild(liInv.firstChild);
+            }
+            perso["modificateurs"] = modif;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateModif();
+        }
+
+        perso = JSON.parse(window.sessionStorage.getItem(id));
+
+        if(perso["modificateurs"] !== undefined) {
+            modif = perso["modificateurs"];
+        } else {
+            modif = {"listModif" : []};
+        }
+
+        let carac = document.getElementById("carac");
+        let comp = document.getElementById("comp");
+        let monaie = document.getElementById("monaie");
+        let inv = document.getElementById("inv");
+        let equip = document.getElementById("equip");
+        let coupS = document.getElementById("coupS");
+        let home = document.getElementById("home");
+
+        carac.href = "caracteristique.html?id="+id;
+        comp.href = "competence.html?id="+id;
+        monaie.href = "monaie.html?id="+id;
+        inv.href = "inventaire.html?id="+id;
+        equip.href = "equipement.html?id="+id;
+        coupS.href = "coup_speciaux.html?id="+id;
+        home.href = "perso.html?id="+id;
+
+        perso = JSON.parse(window.sessionStorage.getItem(id));
+        modif = perso["modificateurs"];
+        generateModif();
+    </script>
+</body>
+</html>

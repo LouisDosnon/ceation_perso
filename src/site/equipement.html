@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</head>
+<body>
+    <ul class="navBar">
+        <li><a href="" id="home">home</a></li>
+        <li><a href="" id="carac">caracteristique</a></li>
+        <li><a href="" id="comp">competence</a></li>
+        <li><a href="" id="monaie">monaie</a></li>
+        <li><a href="" id="inv">inventaire</a></li>
+        <li><a href="" id="equip" class="active">equipement</a></li>
+        <li><a href="" id="coupS">coup speciaux</a></li>
+        <li><a href="" id="modif">modificateur</a></li>
+        <li><a href="" id="drive">drive</a></li>
+    </ul>
+    <h1>Equipements</h1>
+    <div class="carac grey">
+        <ul>
+            <li>
+                <span id="tete_int">tete interieur </span>
+                <button onclick="modifTeteInt()">modif</button>
+            </li>
+            <li>
+                <span id="tete_ext">tete exterieur</span>
+                <button onclick="modifTeteExt()">modif</button>
+            </li>
+            <li>
+                <span id="torse_int">torse interieur</span>
+                <button onclick="modifTorseInt()">modif</button>
+            </li>
+            <li>
+                <span id="torse_ext">torse exterieur</span>
+                <button onclick="modifTorseExt()">modif</button>
+            </li>
+            <li>
+                <span id="jambe_int">jambe interieur</span>
+                <button onclick="modifJambeInt()">modif</button>
+            </li>
+            <li>
+                <span id="jambe_ext">jambe exterieur</span>
+                <button onclick="modifJambeExt()">modif</button>
+            </li>
+            <li>
+                <span id="pied_int">pied interireur</span>
+                <button onclick="modifPiedInt()">modif</button>
+            </li>
+            <li><span id="pied_ext">pied exterieur</span>
+                <button onclick="modifPiedExt()">modif</button>
+            </li>
+            <li>
+                <span id="arme">arme</span>
+                <button onclick="modifArme()">modif</button>
+            </li>
+        </ul>
+        <h3>Autres</h3>
+        <button onclick="addAutre()">add</button>
+        <table>
+            <thead>
+            <th class = "td_span"></th>
+            <th class = "td_button"></th>
+            <th class = "td_button"></th>
+            </thead>
+            <tbody id="autre">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // Récupère la chaîne de requête de l'URL actuelle
+        const searchParams = new URLSearchParams(window.location.search);
+
+        // Récupère la valeur du paramètre "paramName"
+        const getParam = searchParams.get("perso");
+
+        let equip;
+
+        function generateAutre(equip){
+            equip["autre"].forEach(element => {
+                let tr = document.createElement("tr");
+                let td1 = document.createElement("td");
+                let td2 = document.createElement("td");
+                let td3 = document.createElement("td");
+                let span = document.createElement("span");
+                let buttonModif = document.createElement("button");
+                let buttonSuppr = document.createElement("button");
+                let temp = equip["autre"].indexOf(element);
+                span.textContent = element["nom"] + " = " + element["desc"];
+                buttonModif.addEventListener("click", () => {
+                    modifInv(temp);
+                });
+                buttonModif.textContent = "modif";
+                buttonSuppr.addEventListener("click", () => {
+                    supprInv(temp);
+                });
+                buttonSuppr.textContent = "suppr";
+                td1.appendChild(span);
+                td2.appendChild(buttonModif);
+                td3.appendChild(buttonSuppr);
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                document.getElementById("autre").appendChild(tr);
+            });
+        }
+
+        function modifTeteInt() {
+            equip["tete_int"]["nom"] = prompt("please enter new name", equip["tete_int"]["nom"]);
+            equip["tete_int"]["desc"] = prompt("please enter new description", equip["tete_int"]["desc"])
+            document.getElementById("tete_int").textContent = "tete interieur : "
+                + equip["tete_int"]["nom"] + " = " + equip["tete_int"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifTeteExt() {
+            equip["tete_ext"]["nom"] = prompt("please enter new name", equip["tete_ext"]["nom"]);
+            equip["tete_ext"]["desc"] = prompt("please enter new description", equip["tete_ext"]["desc"])
+            document.getElementById("tete_ext").textContent = "tete exterieur : "
+                + equip["tete_ext"]["nom"] + " = " + equip["tete_ext"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifTorseInt() {
+            equip["torse_int"]["nom"] = prompt("please enter new name", equip["torse_int"]["nom"]);
+            equip["torse_int"]["desc"] = prompt("please enter new description", equip["torse_int"]["desc"])
+            document.getElementById("torse_int").textContent = "torse interieur : "
+                + equip["torse_int"]["nom"] + " = " + equip["torse_int"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifTorseExt() {
+            equip["torse_ext"]["nom"] = prompt("please enter new name", equip["torse_ext"]["nom"]);
+            equip["torse_ext"]["desc"] = prompt("please enter new description", equip["torse_ext"]["desc"])
+            document.getElementById("torse_ext").textContent = "torse exterieur : "
+                + equip["torse_ext"]["nom"] + " = " + equip["tete_ext"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifJambeInt() {
+            equip["jambe_int"]["nom"] = prompt("please enter new name", equip["jambe_int"]["nom"]);
+            equip["jambe_int"]["desc"] = prompt("please enter new description", equip["jambe_int"]["desc"])
+            document.getElementById("jambe_int").textContent = "jambe interieur : "
+                + equip["jambe_int"]["nom"] + " = " + equip["jambe_int"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifJambeExt() {
+            equip["jambe_ext"]["nom"] = prompt("please enter new name", equip["jambe_ext"]["nom"]);
+            equip["jambe_ext"]["desc"] = prompt("please enter new description", equip["jambe_ext"]["desc"])
+            document.getElementById("jambe_ext").textContent = "jambe exterieur : "
+                + equip["jambe_ext"]["nom"] + " = " + equip["jambe_ext"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifPiedInt() {
+            equip["pied_int"]["nom"] = prompt("please enter new name", equip["pied_int"]["nom"]);
+            equip["pied_int"]["desc"] = prompt("please enter new description", equip["pied_int"]["desc"])
+            document.getElementById("pied_int").textContent = "pied interieur : "
+                + equip["pied_int"]["nom"] + " = " + equip["pied_int"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifPiedExt() {
+            equip["pied_ext"]["nom"] = prompt("please enter new name", equip["pied_ext"]["nom"]);
+            equip["pied_ext"]["desc"] = prompt("please enter new description", equip["pied_ext"]["desc"])
+            document.getElementById("pied_ext").textContent = "pied exterieur : "
+                + equip["pied_ext"]["nom"] + " = " + equip["pied_ext"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifArme() {
+            equip["arme"]["nom"] = prompt("please enter new name", equip["arme"]["nom"]);
+            equip["arme"]["desc"] = prompt("please enter new description", equip["arme"]["desc"])
+            document.getElementById("arme").textContent = "arme : "
+                + equip["arme"]["nom"] + " = " + equip["arme"]["desc"];
+            perso["equipement"] = equip;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function addAutre() {
+            let nom = prompt("please enter new name");
+            let desc = prompt("please enter new description");
+            autre["listObj"].push({"nom": nom, "desc": desc});
+            const liInv = document.getElementById("list_autre");
+            while(liInv.hasChildNodes()){
+                liInv.removeChild(liInv.firstChild);
+            }
+            equip["autre"] = autre;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateAutre();
+        }
+
+        function modifAutre(i) {
+            autre["listObj"][i]["nom"] = prompt("please enter new name", autre["listObj"][i]["nom"]);
+            autre["listObj"][i]["desc"] = prompt("please enter new description", autre["listObj"][i]["desc"]);
+            const liInv = document.getElementById("list_autre");
+            while(liInv.hasChildNodes()){
+                liInv.removeChild(liInv.firstChild);
+            }
+            equip["autre"] = autre;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateAutre();
+        }
+
+        function supprAutre(i) {
+            autre["listObj"][i]["nom"] = prompt("please enter new name", autre["listObj"][i]["nom"]);
+            delete autre["listObj"][i];
+            const liInv = document.getElementById("list_autre");
+            while(liInv.hasChildNodes()){
+                liInv.removeChild(liInv.firstChild);
+            }
+            equip["autre"] = autre;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+            generateAutre();
+        }
+
+        $.ajax({
+            method: "get",
+            url: `get/${getParam}`,
+            dataType: "json",
+            success: function (data) {
+                let equip = data.perso.equipement
+                document.getElementById("tete_int").textContent = "tete interieur : "
+                    + equip["tete_int"]["nom"] + " = " + equip["tete_int"]["desc"];
+                document.getElementById("tete_ext").textContent = "tete exterieur : "
+                    + equip.tete_ext.nom + " = " + equip.tete_ext.desc;
+                document.getElementById("torse_int").textContent = "torse interieur : "
+                    + equip.torse_int.nom + " = " + equip.torse_int.desc;
+                document.getElementById("torse_ext").textContent = "torse exterieur : "
+                    + equip.torse_ext.nom + " = " + equip.torse_ext.desc;
+                document.getElementById("jambe_int").textContent = "jambe interieur : "
+                    + equip.jambe_int.nom + " = " + equip.jambe_int.desc;
+                document.getElementById("jambe_ext").textContent = "jambe exterieur : "
+                    + equip.jambe_ext.nom + " = " + equip.jambe_ext.desc;
+                document.getElementById("pied_int").textContent = "pied interieur : "
+                    + equip.pied_int.nom + " = " + equip.pied_int.desc;
+                document.getElementById("pied_ext").textContent = "pied exterieur : "
+                    + equip.pied_ext.nom + " = " + equip.pied_ext.desc;
+                document.getElementById("arme").textContent = "arme : "
+                    + equip.arme.nom + " = " + equip.arme.desc;
+                generateAutre(equip);
+            }
+        })
+
+        let carac = document.getElementById("carac");
+        let comp = document.getElementById("comp");
+        let monaie = document.getElementById("monaie");
+        let inv = document.getElementById("inv");
+        let home = document.getElementById("home");
+        let coupS = document.getElementById("coupS");
+        let modif = document.getElementById("modif");
+
+        carac.href = "caracteristique.html?perso="+getParam;
+        comp.href = "competence.html?perso="+getParam;
+        monaie.href = "monaie.html?perso="+getParam;
+        inv.href = "inventaire.html?perso="+getParam;
+        home.href = "perso.html?perso="+getParam;
+        coupS.href = "coup_speciaux.html?perso="+getParam;
+        modif.href = "modificateur.html?perso="+getParam;
+    </script>
+</body>
+</html>

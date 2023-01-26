@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        const id = $_GET('id');
+    </script>
+</head>
+<body>
+    <ul class="navBar">
+        <li><a href="" id="home">home</a></li>
+        <li><a href="" id="carac" class="active">caracteristique</a></li>
+        <li><a href="" id="comp">competence</a></li>
+        <li><a href="" id="monaie">monaie</a></li>
+        <li><a href="" id="inv">inventaire</a></li>
+        <li><a href="" id="equip">equipement</a></li>
+        <li><a href="" id="coupS">coup speciaux</a></li>
+        <li><a href="" id="modif">modificateur</a></li>
+        <li><a href="" id="drive">drive</a></li>
+    </ul>
+    <h1>Caracteristiques</h1>
+    <div class="carac grey">
+        <ul>
+            <li>
+                <span id="cha">charisme</span>
+                <button onclick="modifCha()">modif</button>
+            </li>
+            <li>
+                <span id="cou">courage</span>
+                <button onclick="modifCou()">modif</button>
+            </li>
+            <li>
+                <span id="adr">adresse</span>
+                <button onclick="modifAdr()">modif</button>
+            </li>
+            <li>
+                <span id="int">intelligence</span>
+                <button onclick="modifInt()">modif</button>
+            </li>
+            <li>
+                <span id="fo">force</span>
+                <button onclick="modifFo()">modif</button>
+            </li>
+            <li>
+                <span id="rm">resistance magique</span>
+            </li>
+            <li>
+                <span id="att">attaque</span>
+                <button onclick="modifAtt()">modif</button>
+            </li>
+            <li>
+                <span id="prd">parade</span>
+                <button onclick="modifPrd()">modif</button>
+            </li>
+            <li>
+                <span id="ea">energie astrale</span>
+                <button onclick="modifEa()">modif</button>
+            </li>
+            <li>
+                <span id="ep">energie physique</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+
+        // Récupère la chaîne de requête de l'URL actuelle
+        const searchParams = new URLSearchParams(window.location.search);
+
+        // Récupère la valeur du paramètre "paramName"
+        const getParam = searchParams.get("perso");
+
+        let carac;
+
+        function modifCha() {
+            carac["charisme"] = prompt("please enter new value", carac["charisme"]);
+            document.getElementById("cha").textContent = "charisme : " + carac["charisme"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifCou() {
+            carac["courage"] = prompt("please enter new value", carac["courage"]);
+            document.getElementById("cou").textContent = "courage : " + carac["courage"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifAdr() {
+            carac["adresse"] = prompt("please enter new value", carac["adresse"]);
+            document.getElementById("adr").textContent = "adresse : " + carac["adresse"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+
+        }
+        function modifInt() {
+            carac["intelligence"] = prompt("please enter new value", carac["intelligence"]);
+            document.getElementById("int").textContent = "intelligence : " + carac["intelligence"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifFo() {
+            carac["force"] = prompt("please enter new value", carac["force"]);
+            document.getElementById("fo").textContent = "force : " + carac["force"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifAtt() {
+            carac["attaque"] = prompt("please enter new value", carac["attaque"]);
+            document.getElementById("att").textContent = "attaque : " + carac["attaque"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifPrd() {
+            carac["parade"] = prompt("please enter new value", carac["parade"]);
+            document.getElementById("prd").textContent = "parade : " + carac["parade"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+        function modifEa() {
+            carac[""] = prompt("please enter new value(a creer");
+            document.getElementById("ea").textContent = "energie astrale : " + carac["charisme"];
+            perso["caracteristique"] = carac;
+            window.sessionStorage.setItem(id, JSON.stringify(perso));
+        }
+
+        $.ajax({
+            method : "get",
+            url : `get/${getParam}`,
+            dataType: "json",
+            success : function(data) {
+                let carac = data.perso.caracteristique
+                document.getElementById("cha").textContent = "charisme = " + carac.charisme;
+                document.getElementById("cou").textContent = "courage = " + carac.courage;
+                document.getElementById("adr").textContent = "adresse = " + carac.adresse;
+                document.getElementById("int").textContent = "intelligence = " + carac.intelligence;
+                document.getElementById("fo").textContent = "force = " + carac.force;
+                document.getElementById("rm").textContent = "resistance magique = " + carac.charisme;
+                document.getElementById("att").textContent = "attaque = " + carac.attaque;
+                document.getElementById("prd").textContent = "parade = " + carac.parade;
+                document.getElementById("ea").textContent = "energie astrale = " + carac.enerAstr;
+                document.getElementById("ep").textContent = "energie physique = " + carac.charisme;
+            }
+        })
+
+        let home = document.getElementById("home");
+        let comp = document.getElementById("comp");
+        let monaie = document.getElementById("monaie");
+        let inv = document.getElementById("inv");
+        let equip = document.getElementById("equip");
+        let coupS = document.getElementById("coupS");
+        let modif = document.getElementById("modif");
+
+        home.href = "perso.html?perso="+getParam;
+        comp.href = "competence.html?perso="+getParam;
+        monaie.href = "monaie.html?perso="+getParam;
+        inv.href = "inventaire.html?perso="+getParam;
+        equip.href = "equipement.html?perso="+getParam;
+        coupS.href = "coup_speciaux.html?perso="+getParam;
+        modif.href = "modificateur.html?perso="+getParam;
+    </script>
+</body>
+</html>

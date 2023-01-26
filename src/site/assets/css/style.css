@@ -1,0 +1,107 @@
+h1, h3, ul, li{
+    text-align: center;
+}
+
+h1, h2 {
+    color: darkblue;
+}
+
+.tab{
+    display : flex;
+    flex-wrap: wrap;
+}
+
+.elem{
+    flex: 1 1 49%;
+}
+
+.div_lien {
+    flex: 3 1 24%;
+}
+
+.lien {
+    height: 90%;
+    width: 90%;
+    background-color: lightslategray;
+    border: slategray 2px solid;
+    border-radius: 12.5px;
+    margin: 10px;
+}
+
+.carac{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+}
+
+.carac ul{
+    list-style-type: none;
+}
+
+.carac li{
+    text-align: center;
+}
+
+body {
+    background-image: url("../img/background.png");
+    background-repeat:  no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.grey {
+    background-image: none;
+    background-color: grey;
+    width : 60%;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 45px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    width : 100%;
+}
+.td_span {
+    width:70%;
+}
+.td_button {
+    width:15%;
+}
+
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: lightgrey;
+    background-image: none;
+}
+
+.navBar li {
+    float: left;
+}
+
+.navBar li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navBar li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.navBar li a.active {
+    color: white;
+    background-color: #04AA6D;
+}
