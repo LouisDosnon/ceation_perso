@@ -1,0 +1,747 @@
+[
+  {
+    "caracteristique": {
+      "adresse": "13",
+      "attaque": "8",
+      "charisme": "12",
+      "courage": "12",
+      "destin": "1",
+      "enerAstr": "34",
+      "force": "8",
+      "intelligence": "14",
+      "parade": "10"
+    },
+    "classe": "mage air",
+    "competence": {
+      "listObj": [
+        {
+          "desc": "sait lire",
+          "nom": "erudition"
+        },
+        {
+          "desc": "sait lire les runes",
+          "nom": "rune bizarre"
+        },
+        {
+          "desc": "tombe dans les pièges obligatoirement",
+          "nom": "tomber dans les pièges"
+        },
+        {
+          "desc": "peut monter a cheval",
+          "nom": "cheuvaucher"
+        },
+        {
+          "desc": "peut parler avec les monstres",
+          "nom": "langue des monstres"
+        },
+        {
+          "desc": "peut sans coup dans le dos",
+          "nom": "appel des renfort"
+        },
+        {
+          "desc": "attire les gros félin et les ours",
+          "nom": "shampoing au herbe"
+        },
+        {
+          "desc": "PI +1 coau contact et a distance contre elfe noir",
+          "nom": "Némésis de drows"
+        },
+        {
+          "desc": "Int +3 pour pister les dragons",
+          "nom": "pisteur dragonnier"
+        }
+      ]
+    },
+    "equipement": {
+      "arme": {
+        "desc": "cha -1, dégât +3(combat), +1D (feu, foudre, glace), rupture 1-3",
+        "nom": "romorfal 500 (niv 3)"
+      },
+      "autre": [
+        {
+          "desc": "+1 pour les sort de foudre",
+          "nom": "bague"
+        },
+        {
+          "desc": "contrôler les guêpes 5 km a la ronde",
+          "nom": "amulette abeille"
+        }
+      ],
+      "jambe_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "jambe_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "pied_ext": {
+        "desc": "+1 adr (1-4)",
+        "nom": "botte adresse"
+      },
+      "pied_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "tete_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "tete_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "torse_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "torse_int": {
+        "desc": "pr 2, Adr -1, cha +1",
+        "nom": "robe rembourré de qualité"
+      }
+    },
+    "image": "data:image/jpeg;base64,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",
+    "inventaire": {
+      "listObj": [
+        {
+          "desc": "desc",
+          "nom": "clé"
+        },
+        {
+          "desc": "*4",
+          "nom": "fiole vide"
+        },
+        {
+          "desc": "cha-1, pr 1",
+          "nom": "capuche en cuir"
+        },
+        {
+          "desc": "att -1, pr2 ds le dos, (1-3)",
+          "nom": "bouclier imposant"
+        },
+        {
+          "desc": "+20 PV +20 PA",
+          "nom": "bière regenerante"
+        },
+        {
+          "desc": "rempli d'ectoplasme",
+          "nom": "fiole"
+        }
+      ]
+    },
+    "modificateurs": {
+      "listModif": [
+        {
+          "attribut": "bague",
+          "desc": "pour les sort eclair",
+          "difference": 1
+        },
+        {
+          "attribut": "bonus intelligence",
+          "desc": "sort",
+          "difference": 2
+        },
+        {
+          "attribut": "degat",
+          "desc": "baton combat",
+          "difference": 3
+        },
+        {
+          "attribut": "degat",
+          "desc": "baton feu, foudre, glace +1D",
+          "difference": 0
+        },
+        {
+          "attribut": "attaque",
+          "desc": "signe de l'huître : en bord de mer",
+          "difference": 1
+        }
+      ]
+    },
+    "monaie": {
+      "argent": "5",
+      "bronze": "0",
+      "or": "72"
+    },
+    "niveau": "5",
+    "nom": "Shakian Ikonen",
+    "pv": "26",
+    "pv_max": "26",
+    "race": "Demi-elfe",
+    "xp": "420",
+    "xp_max": "600"
+  },
+  {
+    "caracteristique": {
+      "adresse": "10",
+      "attaque": "9",
+      "charisme": "12",
+      "courage": "12",
+      "destin": "3",
+      "enerAstr": "1",
+      "force": "11",
+      "intelligence": "11",
+      "parade": "10"
+    },
+    "classe": "Paladin de Dlul",
+    "competence": {
+      "listObj": [
+        {
+          "desc": "permet de monter sur un cheval (epreuve sur Ad, Cha)",
+          "nom": "cheuvaucher"
+        },
+        {
+          "desc": "permet d'intimider un enemie (épreuve sur Cou, Cha)",
+          "nom": "Intimider"
+        },
+        {
+          "desc": "1h de méditation en plus du sommeil",
+          "nom": "Récupération"
+        },
+        {
+          "desc": "séduire sous la pluie, Cha +2",
+          "nom": "attractivité humide"
+        },
+        {
+          "desc": "Att +1, Tire +1 contre les mort-vivant",
+          "nom": "Protecteur de vie"
+        },
+        {
+          "desc": "Int +3 pour fabriquer une embarcation rudimentaire",
+          "nom": "expert en nautisme"
+        },
+        {
+          "desc": "sait lire",
+          "nom": "erudition"
+        },
+        {
+          "desc": "",
+          "nom": "arme de bourrin"
+        },
+        {
+          "desc": "",
+          "nom": "premier soin"
+        }
+      ]
+    },
+    "coupSpeciaux": {
+      "listCoup": [
+        {
+          "desc": "desc",
+          "nom": "nom"
+        }
+      ]
+    },
+    "equipement": {
+      "arme": {
+        "desc": "1D+5, prd-1, att+1, prd+1",
+        "nom": "masse paf"
+      },
+      "autre": [
+        {
+          "desc": "Pr2, att-1, prd+2, casse(1-2)",
+          "nom": "bouclier cerclé"
+        },
+        {
+          "desc": "3 charge, dégât+3",
+          "nom": "bague de puissance novice"
+        },
+        {
+          "desc": "3 charge, épreuve prodige+2",
+          "nom": "bague de sûreté"
+        },
+        {
+          "desc": "*2, 5 pa",
+          "nom": "potion de mana de vitos"
+        },
+        {
+          "desc": "Pr 2 sur tous le corp",
+          "nom": "gambijama de skelos"
+        }
+      ],
+      "jambe_ext": {
+        "desc": "Pr 1, adr-2, casse(1-3)",
+        "nom": "jambe en métal legere"
+      },
+      "jambe_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "pied_ext": {
+        "desc": "casse(1-4)",
+        "nom": "botte de cuir standard"
+      },
+      "pied_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "tete_ext": {
+        "desc": "Pr 2, adr-1, cou+1, casse(1-3)",
+        "nom": "casque le beau haume"
+      },
+      "tete_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "torse_ext": {
+        "desc": "Pr 2, adr-1, cou+1, casse(1-3)",
+        "nom": "côté de maille basique avec manche"
+      },
+      "torse_int": {
+        "desc": "null",
+        "nom": "null"
+      }
+    },
+    "image": "data:image/jpeg;base64,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",
+    "inventaire": {
+      "listObj": [
+        {
+          "desc": "stop emoragie, 15 PV, réduit fracture, *4",
+          "nom": "potion de soins majeur"
+        },
+        {
+          "desc": "représentant euridice",
+          "nom": "statuette de terre"
+        },
+        {
+          "desc": "*2",
+          "nom": "potion rouge (soins)"
+        },
+        {
+          "desc": "",
+          "nom": "robe de mage de base"
+        },
+        {
+          "desc": "",
+          "nom": "baton feu grondant"
+        }
+      ]
+    },
+    "modificateurs": {
+      "listModif": [
+        {
+          "attribut": "degat",
+          "desc": "+1D foudre (marteau)",
+          "difference": 0
+        }
+      ]
+    },
+    "monaie": {
+      "argent": "6",
+      "bronze": "3",
+      "or": "99"
+    },
+    "niveau": "3",
+    "nom": "Euridice de Valois",
+    "pv": "36",
+    "pv_max": "37",
+    "race": "Humain",
+    "xp": "263",
+    "xp_max": "600"
+  },
+  {
+    "caracteristique": {
+      "adresse": "11",
+      "attaque": "11",
+      "charisme": "11",
+      "courage": "13",
+      "destin": "0",
+      "enerAstr": "0",
+      "force": "14",
+      "image": "data:image/jpeg;base64,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",
+      "intelligence": "10",
+      "parade": "10"
+    },
+    "classe": "Guerrier",
+    "competence": {
+      "listObj": [
+        {
+          "desc": "peut monter des animaux",
+          "nom": "Chevaucher"
+        },
+        {
+          "desc": "peut utiliser des armes de jet",
+          "nom": "tirer correctement"
+        },
+        {
+          "desc": "embarcation rudimentaire",
+          "nom": "nautisme"
+        },
+        {
+          "desc": "att +1, tir +1, contre les dragons",
+          "nom": "boucher des dragons"
+        },
+        {
+          "desc": "cha +2, la nuit",
+          "nom": "regard tenebreux"
+        },
+        {
+          "desc": "att +1, tire +1, contre magicien",
+          "nom": "contre terrurgiste"
+        },
+        {
+          "desc": "une arme dans chaque main",
+          "nom": "ambidextre"
+        },
+        {
+          "desc": "frappé en premier",
+          "nom": "cherche des noises"
+        },
+        {
+          "desc": "malus la nuit",
+          "nom": "sentir des pied"
+        },
+        {
+          "desc": "attaque mental inoffensifs",
+          "nom": "tête vide"
+        },
+        {
+          "desc": "arme a deux main",
+          "nom": "arme de bourrin"
+        },
+        {
+          "desc": "",
+          "nom": "bourre pif"
+        },
+        {
+          "desc": "cha +2, avec autorités",
+          "nom": "air innocent"
+        },
+        {
+          "desc": "attiré harpie, manticores et griffons",
+          "nom": "musc puissant"
+        },
+        {
+          "desc": "RM +2 dans les plaines et dans les terres sauvages",
+          "nom": "fils des plaines"
+        },
+        {
+          "desc": "-1 de malus Prd pour les armes a deux mains",
+          "nom": "biceps gonflée"
+        },
+        {
+          "desc": "peut intimidée",
+          "nom": "intimidation"
+        }
+      ]
+    },
+    "coupSpeciaux": {
+      "listCoup": [
+        {
+          "desc": "imparable, 3 cible, *3 par combat, non d'affilé, echec critique : brise l'arme, succes critique : +2",
+          "nom": "bagage de defense"
+        },
+        {
+          "desc": "att +1",
+          "nom": "entraînement"
+        },
+        {
+          "desc": "attaque imparable, degat doublé, 1* par combat, echec critique : enemie a attaque imparable, succès : +2 XP, succès critique: +1D",
+          "nom": "ours gla"
+        }
+      ]
+    },
+    "equipement": {
+      "arme": {
+        "desc": "2D+5, Prd -1",
+        "nom": "Clé mort de Wallace"
+      },
+      "autre": [
+        {
+          "desc": "",
+          "nom": "Gantelet de cuir bouillie"
+        },
+        {
+          "desc": "1D+2",
+          "nom": "arc court de bonne qualité"
+        },
+        {
+          "desc": "*25",
+          "nom": "fleche"
+        },
+        {
+          "desc": "2d+5, at -1, Prd -1, cou -2, cha +2",
+          "nom": "épée deux main durandile"
+        },
+        {
+          "desc": "2 pr (torse), pas de malus au combat a main nue",
+          "nom": "gant en cuir renforcer"
+        },
+        {
+          "desc": "inutilisable en combat",
+          "nom": "épée demesure"
+        },
+        {
+          "desc": "3D+5, test contre le froid des que touché, att -1, Prd -4",
+          "nom": "hache de givre glace"
+        },
+        {
+          "desc": "2 Pr torse et tête, cou +1",
+          "nom": "peau ours renforce"
+        }
+      ],
+      "jambe_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "jambe_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "pied_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "pied_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "tete_ext": {
+        "desc": "cha -1, Ad -1, cou +3, pr 1",
+        "nom": "Casque en métal"
+      },
+      "tete_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "torse_ext": {
+        "desc": "cha -1, Ad -1, cou +3, pr 1",
+        "nom": "Plastron de cuir bouillie"
+      },
+      "torse_int": {
+        "desc": "null",
+        "nom": "null"
+      }
+    },
+    "image": "data:image/jpeg;base64,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",
+    "inventaire": {
+      "listObj": [
+        {
+          "desc": "",
+          "nom": "rouleau de tissus"
+        },
+        {
+          "desc": "3 kg",
+          "nom": "Tatuette en or"
+        },
+        {
+          "desc": "",
+          "nom": "surin"
+        },
+        {
+          "desc": "att -1, Prd -1, Adr -1, 6 dozes",
+          "nom": "fiole de venin"
+        },
+        {
+          "desc": "",
+          "nom": "rubi vert"
+        },
+        {
+          "desc": "*2",
+          "nom": "mandibule de fourmie"
+        },
+        {
+          "desc": "en obsidienne avec une plaque en or",
+          "nom": "porte plume"
+        },
+        {
+          "desc": "reliure en metal",
+          "nom": "petit carnet avec porte plume"
+        },
+        {
+          "desc": "",
+          "nom": "drapeau avec armoirie"
+        },
+        {
+          "desc": "",
+          "nom": "tête de squelette disloqué"
+        },
+        {
+          "desc": "dessins sur le theme de bataille",
+          "nom": "bouquin militaire"
+        },
+        {
+          "desc": "",
+          "nom": "élément d alambique"
+        },
+        {
+          "desc": "",
+          "nom": "guide de renforcement physique"
+        },
+        {
+          "desc": "",
+          "nom": "livre de cuisine"
+        },
+        {
+          "desc": "havre sac",
+          "nom": "sac a dos magique"
+        }
+      ]
+    },
+    "modificateurs": {
+      "listModif": [
+        {
+          "attribut": "attaque",
+          "desc": "bonus de force",
+          "difference": 2
+        },
+        {
+          "attribut": "champi",
+          "desc": "2 assault en 1, 30s, att+2, prd+2, int+1, attaque après esquive",
+          "difference": 0
+        }
+      ]
+    },
+    "monaie": {
+      "argent": "11",
+      "bronze": "3",
+      "or": "1419"
+    },
+    "niveau": "4",
+    "nom": "Dak Skolzin",
+    "pv": "0",
+    "pv_max": "47",
+    "race": "Barbare",
+    "xp": "287",
+    "xp_max": "1000"
+  },
+  {
+    "caracteristique": {
+      "adresse": "13",
+      "attaque": "9",
+      "charisme": "12",
+      "courage": "11",
+      "destin": "3",
+      "enerAstr": "0",
+      "force": "11",
+      "intelligence": "11",
+      "parade": "11"
+    },
+    "classe": "pirate",
+    "competence": {
+      "listObj": [
+        {
+          "desc": "fuir sans epreuve",
+          "nom": "appelé des renforts"
+        },
+        {
+          "desc": "test int en présence d'alcool",
+          "nom": "appel du tonneau"
+        },
+        {
+          "desc": "permet obtenir remise chez marchand, test cha",
+          "nom": "arnaque et carambouille"
+        },
+        {
+          "desc": "bonus lors des vols",
+          "nom": "chouraver"
+        },
+        {
+          "desc": "grimper avec bonus",
+          "nom": "escalader"
+        },
+        {
+          "desc": "",
+          "nom": "sait nager"
+        },
+        {
+          "desc": "extérieur, nuit, rm+2",
+          "nom": "manteau des tenbre"
+        },
+        {
+          "desc": "flèche et carreaux non magique, pr+1",
+          "nom": "crainte des fleches"
+        },
+        {
+          "desc": "escalader les statues, ad+2",
+          "nom": "historien de l'art"
+        },
+        {
+          "desc": "peut gagner des po entre les scenar",
+          "nom": "mendian et pleurniché"
+        },
+        {
+          "desc": "sentir trésor et cachette",
+          "nom": "instinct du trésor"
+        },
+        {
+          "desc": "peut tirer avec arme de jet, pistolet+1",
+          "nom": "tirer correctement "
+        },
+        {
+          "desc": "ad et int +2 pour fabriqué une torche",
+          "nom": "phobie des tenebres"
+        }
+      ]
+    },
+    "equipement": {
+      "arme": {
+        "desc": "1D+3, cha-1, cou-1, prd-1",
+        "nom": "épée rapière perrave"
+      },
+      "autre": [
+        {
+          "desc": "arme a feu",
+          "nom": "niafoula-gouz"
+        }
+      ],
+      "jambe_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "jambe_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "pied_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "pied_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "tete_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "tete_int": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "torse_ext": {
+        "desc": "null",
+        "nom": "null"
+      },
+      "torse_int": {
+        "desc": "null",
+        "nom": "null"
+      }
+    },
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt3dCbxt-XnGqA55OZHmCZmKOkKXDqZiXdMA&usqp=CAU",
+    "inventaire": {
+      "listObj": [
+        {
+          "desc": "*3",
+          "nom": "dose de poudre à canon"
+        },
+        {
+          "desc": "desc",
+          "nom": "obj"
+        }
+      ]
+    },
+    "monaie": {
+      "argent": "0",
+      "bronze": "0",
+      "or": "58"
+    },
+    "niveau": "3",
+    "nom": "Indiana Wenbethboern",
+    "pv": "30",
+    "pv_max": "30",
+    "race": "humain",
+    "xp": "0",
+    "xp_max": "600"
+  }
+]
