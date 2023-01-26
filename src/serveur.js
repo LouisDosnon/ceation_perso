@@ -1,13 +1,10 @@
 const express = require('express')
 const config = require('./config.js')
-const cors = require('cors')
 
 const port_http = config.port_http
 const persos = require('./data/persos.json')
 
 var app = express();
-
-app.use(cors({origin:'*'}));
 
 //app.use("/")
 app.use(express.json({ limit: '50mb' }))
