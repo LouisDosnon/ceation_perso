@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const base = "D:/louis/Documents/jdr/node_perso/src/serveur.js"
+const base = "."
 const port_http = 3000
 
 if (!fs.existsSync(base)) {

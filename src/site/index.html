@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log("jquery chargé")
+        })
+
+        function get_perso() {
+            $.ajax({
+                method : "get",
+                url : "get",
+                dataType: "json",
+                success : function(data) {
+                    console.log("data" + data)
+                    let affichage = ""
+                    data.list_perso.map((perso) => {
+                        affichage += "<li><a href='./perso.html?perso=" + perso.nom + "'>" + perso.nom + "</a></li>"
+                    })
+                    $("#list_perso").html(affichage)
+                }
+            })
+        }
+
+        get_perso()
+    </script>
+</head>
+<body>
+    <h1>Perso</h1>
+    <ul id="list_perso">
+    </ul>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script type="text/javascript" src="jquery-3.6.3.min.js"></script>
+
+    <script>
+        // Récupère la chaîne de requête de l'URL actuelle
+        const searchParams = new URLSearchParams(window.location.search);
+
+        // Récupère la valeur du paramètre "paramName"
+        const getParam = searchParams.get("perso");
+
+        function get_perso() {
+            $.ajax({
+                method : "get",
+                url : `get/${getParam}`,
+                dataType: "json",
+                success : function(data) {
+                    $("#nom").html(data.perso.nom)
+                    $("#race").html(data.perso.race)
+                    $("#classe").html(data.perso.classe)
+                    $("#vie").html(data.perso.pv + " / " + data.perso.pv_max)
+                    $("#niveau").html(data.perso.niveau + " ( " + data.perso.xp +" / " + data.perso.pv_max + " )")
+                    $("#img").attr("src", data.perso.image)
+                    get_carac(data.perso.caracteristique)
+                    get_comp(data.perso.competence)
+                    get_inv(data.perso.inventaire)
+                    get_equip(data.perso.equipement)
+                    get_modif(data.perso.modificateurs)
+                    get_monaie(data.perso.monaie)
+                }
+            })
+        }
+
+        function get_carac(carac) {
+            $("#charisme").html(carac.charisme)
+            $("#courage").html(carac.courage)
+            $("#adresse").html(carac.adresse)
+            $("#force").html(carac.force)
+            $("#inteligence").html(carac.intelligence)
+            $("#attaque").html(carac.attaque)
+            $("#parade").html(carac.parade)
+            $("#destin").html(carac.destin)
+        }
+
+        function get_comp(compList) {
+            let compAffichage = "";
+            compList.listObj.map(comp => {
+                compAffichage += "<li>" + comp.nom  + " ( " + comp.desc + " )";
+            })
+            $("#competence").html(compAffichage)
+        }
+
+        function get_equip(equip) {
+            $("#tete_int").html(equip.tete_int.nom + " ( " + equip.tete_int.desc + " )")
+            $("#tete_ext").html(equip.tete_ext.nom + " ( " + equip.tete_ext.desc + " )")
+            $("#torse_int").html(equip.torse_int.nom + " ( " + equip.torse_int.desc + " )")
+            $("#torse_ext").html(equip.torse_ext.nom + " ( " + equip.torse_ext.desc + " )")
+            $("#jambe_int").html(equip.jambe_int.nom + " ( " + equip.jambe_int.desc + " )")
+            $("#jambe_ext").html(equip.jambe_ext.nom + " ( " + equip.jambe_ext.desc + " )")
+            $("#pied_int").html(equip.pied_int.nom + " ( " + equip.pied_int.desc + " )")
+            $("#pied_ext").html(equip.pied_ext.nom + " ( " + equip.pied_ext.desc + " )")
+            $("#arme").html(equip.arme.nom + " ( " + equip.arme.desc + " )")
+            let autreAffichage = "";
+            equip.autre.map(obj => {
+                autreAffichage += "<li>" + obj.nom  + " ( " + obj.desc + " )";
+            })
+            $("#autre").html(autreAffichage)
+        }
+
+        function get_inv(invList) {
+            let invAffichage = "";
+            invList.listObj.map(obj => {
+                invAffichage += "<li>" + obj.nom  + " ( " + obj.desc + " )";
+            })
+            $("#inventaire").html(invAffichage)
+        }
+
+        function get_modif(modifList) {
+            let modifAffichage = "";
+            modifList.listModif.map(modif => {
+                modifAffichage += "<li>" + modif.attribut  + " ( " + modif.desc + ", " + modif.difference + " )";
+            })
+            $("#modificateur").html(modifAffichage)
+        }
+
+        function get_monaie(monaie) {
+            $("#or").html(monaie.or)
+            $("#argent").html(monaie.argent)
+            $("#bronze").html(monaie.bronze)
+        }
+
+        get_perso()
+
+    </script>
+</head>
+<body>
+    <h1 id="nom"></h1>
+    <div>
+        <p id="race"></p>
+        <p id="classe"></p>
+        <p id="vie"></p>
+        <p id="niveau"></p>
+        <img id="img"/>
+    </div>
+    <div>
+        <h2>Caracteristique</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>charisme</td>
+                    <td id="charisme"></td>
+                </tr>
+                <tr>
+                    <td>courage</td>
+                    <td id="courage"></td>
+                </tr>
+                <tr>
+                    <td>adresse</td>
+                    <td id="adresse"></td>
+                </tr>
+                <tr>
+                    <td>force</td>
+                    <td id="force"></td>
+                </tr>
+                <tr>
+                    <td>intelligence</td>
+                    <td id="inteligence"></td>
+                </tr>
+                <tr>
+                    <td>attaque</td>
+                    <td id="attaque"></td>
+                </tr>
+                <tr>
+                    <td>parade</td>
+                    <td id="parade"></td>
+                </tr>
+                <tr>
+                    <td>destin</td>
+                    <td id="destin"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Competence</h2>
+        <ul id="competence">
+        </ul>
+    </div>
+    <div>
+        <h2>Equipement</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>tete</td>
+                    <td id="tete_int"></td>
+                    <td id="tete_ext"></td>
+                </tr>
+                <tr>
+                    <td>torse</td>
+                    <td id="torse_int"></td>
+                    <td id="torse_ext"></td>
+                </tr>
+                <tr>
+                    <td>jambe</td>
+                    <td id="jambe_int"></td>
+                    <td id="jambe_ext"></td>
+                </tr>
+                <tr>
+                    <td>pied</td>
+                    <td id="pied_int"></td>
+                    <td id="pied_ext"></td>
+                </tr>
+                <tr>
+                    <td>arme</td>
+                    <td id="arme"></td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Autre</h3>
+        <ul id="autre">
+        </ul>
+    </div>
+    <div>
+        <h2>Inventaire</h2>
+        <ul id="inventaire">
+        </ul>
+    </div>
+    <div>
+        <h2>Modificateur</h2>
+        <ul id="modificateur">
+        </ul>
+    </div>
+    <div>
+        <h2>Monaie</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>or</td>
+                    <td id="or"></td>
+                </tr>
+                <tr>
+                    <td>argent</td>
+                    <td id="argent"></td>
+                </tr>
+                <tr>
+                    <td>bronze</td>
+                    <td id="bronze"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
