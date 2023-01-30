@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/creation_perso.github.io/static/css/main.5d621243.css",
-    "main.js": "/creation_perso.github.io/static/js/main.48e44a8d.js",
-    "static/js/787.96959c81.chunk.js": "/creation_perso.github.io/static/js/787.96959c81.chunk.js",
-    "static/media/img1.png": "/creation_perso.github.io/static/media/img1.dbfb976912129f539a0b.png",
-    "index.html": "/creation_perso.github.io/index.html",
-    "main.5d621243.css.map": "/creation_perso.github.io/static/css/main.5d621243.css.map",
-    "main.48e44a8d.js.map": "/creation_perso.github.io/static/js/main.48e44a8d.js.map",
-    "787.96959c81.chunk.js.map": "/creation_perso.github.io/static/js/787.96959c81.chunk.js.map"
+    "main.css": "/creation_perso/static/css/main.1a929775.css",
+    "main.js": "/creation_perso/static/js/main.e1c56a16.js",
+    "static/js/787.96959c81.chunk.js": "/creation_perso/static/js/787.96959c81.chunk.js",
+    "static/media/img1.png": "/creation_perso/static/media/img1.dbfb976912129f539a0b.png",
+    "index.html": "/creation_perso/index.html",
+    "main.1a929775.css.map": "/creation_perso/static/css/main.1a929775.css.map",
+    "main.e1c56a16.js.map": "/creation_perso/static/js/main.e1c56a16.js.map",
+    "787.96959c81.chunk.js.map": "/creation_perso/static/js/787.96959c81.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d621243.css",
-    "static/js/main.48e44a8d.js"
+    "static/css/main.1a929775.css",
+    "static/js/main.e1c56a16.js"
   ]
 }
