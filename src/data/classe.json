@@ -12,7 +12,12 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "deplacement silencieux",
+      "frapper lachement",
+      "tirer correctement"
+    ]
   },
   {
     "name": "bourgeois",
@@ -27,7 +32,14 @@
       "fo_max": 20,
       "int_min": 10,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "appel des renforts",
+      "attire les monstres",
+      "chevaucher",
+      "erudition",
+      "penible"
+    ]
   },
   {
     "name": "guerrier",
@@ -42,7 +54,11 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "armes de bourrin",
+      "bourre-pif"
+    ]
   },
   {
     "name": "ingenieur",
@@ -57,7 +73,14 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "bricolo du dimanche",
+      "desamorcer",
+      "forgeron",
+      "ressemble a rien",
+      "serrurier"
+    ]
   },
   {
     "name": "mage",
@@ -72,7 +95,12 @@
       "fo_max": 20,
       "int_min": 12,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "erudition",
+      "recuperation",
+      "runes bizarres"
+    ]
   },
   {
     "name": "marchand",
@@ -87,7 +115,14 @@
       "fo_max": 20,
       "int_min": 12,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "appel des renforts",
+      "arnaque et carambouille",
+      "erudition",
+      "fariboles",
+      "mefiance"
+    ]
   },
   {
     "name": "menestrel",
@@ -102,7 +137,15 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "attire les monstres",
+      "chevaucher",
+      "erudition",
+      "fariboles",
+      "jonglage et danse",
+      "naivete touchante"
+    ]
   },
   {
     "name": "paladin",
@@ -117,7 +160,12 @@
       "fo_max": 20,
       "int_min": 10,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "chevaucher",
+      "intimider",
+      "recuperation"
+    ]
   },
   {
     "name": "pirate",
@@ -132,7 +180,15 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "appel des renforts",
+      "appel du tonneau",
+      "arnaque et carambouille",
+      "chouraver",
+      "escalader",
+      "nager"
+    ]
   },
   {
     "name": "pretre",
@@ -147,7 +203,12 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "erudition",
+      "mefiance",
+      "recuperation"
+    ]
   },
   {
     "name": "ranger",
@@ -162,7 +223,14 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "deplacement silencieux",
+      "detection",
+      "chevaucher",
+      "nager",
+      "pister"
+    ]
   },
   {
     "name": "voleur",
@@ -177,6 +245,13 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "appel des renforts",
+      "chouraver",
+      "deplacement silencieux",
+      "detection",
+      "serrurier"
+    ]
   }
 ]

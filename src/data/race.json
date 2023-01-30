@@ -12,7 +12,10 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "erudition"
+    ]
   },
   {
     "name": "barbare",
@@ -27,7 +30,14 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+
+    "competence": [
+      "ambidextrie",
+      "chercher des noises",
+      "sentir des pieds",
+      "tete vide"
+    ]
   },
   {
     "name": "nain",
@@ -42,7 +52,13 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "appel du tonneau",
+      "instinct du tresor",
+      "penible",
+      "radin"
+    ]
   },
   {
     "name": "semi-homme",
@@ -57,7 +73,14 @@
       "fo_max": 10,
       "int_min": 10,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "appel du tonneau",
+      "attire les monstres",
+      "cuistot",
+      "instinct de survie",
+      "ressemble a rien"
+    ]
   },
   {
     "name": "demi-elfe",
@@ -72,7 +95,13 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "appel des renforts",
+      "detection",
+      "chouraver",
+      "mefiance"
+    ]
   },
   {
     "name": "haut-elfe",
@@ -87,7 +116,12 @@
       "fo_max": 12,
       "int_min": 11,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "erudition",
+      "runes bizarres",
+      "tomber dans les pieges"
+    ]
   },
   {
     "name": "elfe sylvain",
@@ -102,7 +136,14 @@
       "fo_max": 11,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "chevaucher",
+      "naivete touchante",
+      "premiers soins",
+      "tirer correctement",
+      "tomber dans les pieges"
+    ]
   },
   {
     "name": "elfe-noir",
@@ -117,7 +158,13 @@
       "fo_max": 12,
       "int_min": 12,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "agoraphobie",
+      "deplacement silencieux",
+      "detection",
+      "tirer correctement"
+    ]
   },
   {
     "name": "demi-orque",
@@ -132,7 +179,14 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 10
-    }
+    },
+    "competence": [
+      "agoraphobie",
+      "chercher des noises",
+      "instinct de survie",
+      "sentir des pieds",
+      "tete vide"
+    ]
   },
   {
     "name": "orque",
@@ -147,7 +201,16 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 8
-    }
+    },
+    "competence": [
+      "agoraphobie",
+      "appel du sauvage",
+      "appel du tonneau",
+      "bourre-pif",
+      "instinct de survie",
+      "sentir des pieds",
+      "tête vide"
+    ]
   },
   {
     "name": "gobelin",
@@ -162,7 +225,17 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "agoraphobie",
+      "appel des renforts",
+      "appel du sauvage",
+      "attire les monstres",
+      "instinct de survie",
+      "instinct du trésor",
+      "sentir des pieds",
+      "tete vide"
+    ]
   },
   {
     "name": "ogre",
@@ -177,7 +250,16 @@
       "fo_max": 20,
       "int_min": 0,
       "int_max": 9
-    }
+    },
+    "competence": [
+      "appel du ventre",
+      "appel du tonneau",
+      "armes de bourrin",
+      "instinct de survie",
+      "intimider",
+      "sentir des pieds",
+      "tete vide"
+    ]
   },
   {
     "name": "gnome",
@@ -192,6 +274,14 @@
       "fo_max": 20,
       "int_min": 10,
       "int_max": 20
-    }
+    },
+    "competence": [
+      "ambidextrie",
+      "appel des renforts",
+      "chevaucher",
+      "chouraver",
+      "deplacement silencieux",
+      "instinct du tresor"
+    ]
   }
 ]

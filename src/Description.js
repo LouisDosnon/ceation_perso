@@ -23,7 +23,22 @@ class Description extends React.Component {
                 </ul>
                 <h4>competence</h4>
                 <ul>
-                    <li>chevaucher : permet de monter sur un animal pouvant etre monter</li>
+                    {
+                        this.state.classe.competence.map(comp => {
+                            return (
+                                <li>{comp}</li>
+                            );
+                        })
+                    }
+                    {
+                        this.state.race.competence.map(comp => {
+                            if (!this.state.classe.competence.includes(comp)){
+                                return(
+                                    <li>{comp}</li>
+                                );
+                            }
+                        })
+                    }
                 </ul>
             </div>
         );
